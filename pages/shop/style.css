@@ -1,0 +1,7 @@
+@import url(../../bootstrap/override.css);
+
+.navbar_custom_icon {
+    height: 30px !important;
+    width: 30px !important;
+    object-fit: contain;
+}
