@@ -59,3 +59,24 @@
     font-weight: 600;
     text-transform: uppercase;
 }
+
+.film-info .film-img {
+    width: 100%;
+    aspect-ratio: 3/5;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.btn-show {
+    border: 2px solid #72BE43;
+    height: 36px;
+    width: 36px;
+    border-radius: 36px;
+    color: #72BE43;
+}
+
+.btn-show:hover {
+    border-radius: 36px;
+    color: #72BE43;
+    border: 2px solid #72BE43;
+}

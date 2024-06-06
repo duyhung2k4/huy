@@ -14,7 +14,7 @@ const renderTheaterList = (id) => {
     <p class="mt-2">Tầng 4 & 5, TTTM The Garden, khu đô thị The Manor, đường Mễ Trì, phường Mỹ Đình 1, quận Nam Từ Liêm, Hà Nội</p>
     <div class="row" style="width: 100%;">
         <div class="time col-3">
-            <div class="time-value" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <div class="time-value" data-bs-toggle="modal" data-bs-target="#modal-1">
                 14:25-12/5
             </div>
             <div class="gap-2 mt-1 d-flex flex-row justify-content-center align-items-center">
@@ -23,7 +23,7 @@ const renderTheaterList = (id) => {
             </div>
         </div>
         <div class="time col-3">
-            <div class="time-value" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <div class="time-value" data-bs-toggle="modal" data-bs-target="#modal-1">
                 16:25-12/5
             </div>
             <div class="gap-2 mt-1 d-flex flex-row justify-content-center align-items-center">
@@ -32,7 +32,7 @@ const renderTheaterList = (id) => {
             </div>
         </div>
         <div class="time col-3">
-            <div class="time-value" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <div class="time-value" data-bs-toggle="modal" data-bs-target="#modal-1">
                 18:25-12/5
             </div>
             <div class="gap-2 mt-1 d-flex flex-row justify-content-center align-items-center">
@@ -41,7 +41,7 @@ const renderTheaterList = (id) => {
             </div>
         </div>
         <div class="time col-3">
-            <div class="time-value" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <div class="time-value" data-bs-toggle="modal" data-bs-target="#modal-1">
                 20:25-12/5
             </div>
             <div class="gap-2 mt-1 d-flex flex-row justify-content-center align-items-center">

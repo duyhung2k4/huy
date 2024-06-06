@@ -87,3 +87,16 @@ a:hover {
     background: gray;
     border-radius: 10px;
 }
+
+.modal-content {
+    background-color: #1A1A1A;
+    color: #FFF;
+}
+
+.modal-header {
+    border: 0px;
+}
+
+.modal-footer {
+    border: 0px;
+}
