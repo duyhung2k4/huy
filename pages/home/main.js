@@ -1,4 +1,6 @@
 import films from "../../data/film.json" assert { type: "json" };
+import films_dangchieu from "../../data/film_dangchieu.json" assert { type: "json" };
+import films_sapchieu from "../../data/film_sapchieu.json" assert { type: "json" };
 import sales from "../../data/sale.json" assert { type: "json"};
 import sukiens from "../../data/sukien.json" assert { type: "json" };
 
@@ -17,7 +19,7 @@ const renderFilmList = (id, data) => {
                 <span class="badge bg-secondary">PHỤ ĐỀ</span>
                 <span class="badge bg-success">2D</span>
             </div>
-            <p class="mt-3">DOOR: DUNG MO CUA</p>
+            <p class="mt-3">${item.title}</p>
             <p class="mt-1">Thể loại phim: ${item.the_loai}</p>
             <div class="d-flex flex-row justify-content-between align-center">
                 <a href="/pages/showtimes/index.html" class="d-block">
@@ -137,8 +139,8 @@ const renderModalSale = (data, type) => {
 
 const render = () => {
     renderFilmList("list-film-1", films);
-    renderFilmList("list-film-2", films);
-    renderFilmList("list-film-3", films);
+    renderFilmList("list-film-2", films_dangchieu);
+    renderFilmList("list-film-3", films_sapchieu);
     renderSaleList("list-sale-1", sales, "sale");
     renderSaleList("list-sale-2", sukiens, "sukien");
     renderModalFilm(films);
