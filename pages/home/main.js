@@ -90,7 +90,7 @@ const renderModalFilm = (data, type) => {
                             <p>Thể loại: ${item.the_loai}</p>
                             <p>Khởi chiếu: ${item.khoi_chieu}</p>
                             <p>Thời lượng: ${item.thoi_luong}</p>
-                            <p>Ngôn ngữ: ${item.phu_de}</p>
+                            <p>Ngôn ngữ: ${item.ngon_ngu}</p>
                         </div>
                     </div>
                 </div>
