@@ -9,7 +9,7 @@ const renderTheaterList = (id) => {
     
         e.innerHTML = 
         `
-        <img src="https://www.bhdstar.vn/wp-content/uploads/2023/12/GARDEN-243x330-1.jpg" alt="">
+        <img src="${item.src}" alt="">
         <h5>${item.name}</h5>
         <img src="../../icons/like.svg" height="16" width="16" alt="">
         <p>Địa chỉ: ${item.address}</p>
