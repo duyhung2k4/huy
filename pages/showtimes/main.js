@@ -1,17 +1,20 @@
+import raps from "../../data/rap.json" assert { type: "json" };
+
 const renderTheaterList = (id) => {
     const list = document.getElementById(id);
 
-    for (let i = 0; i < 10; i++) {
+    raps.forEach(item => {
         const e = document.createElement('div');
         e.classList.add("showtime", "d-flex", "flex-column", "align-items-start");
+
 
         e.innerHTML =
             `
         <div class=" d-flex flex-row justify-content-center gap-2 align-items-center">
-        <img src="https://www.bhdstar.vn/wp-content/uploads/2023/08/logo.png" height="24" width="24" alt="">
-        <span>BHD Star The Garden</span>
+        <img src="${item.src}" height="24" width="24" alt="">
+        <span>${item.name}</span>
     </div>
-    <p class="mt-2">Tầng 4 & 5, TTTM The Garden, khu đô thị The Manor, đường Mễ Trì, phường Mỹ Đình 1, quận Nam Từ Liêm, Hà Nội</p>
+    <p class="mt-2">${item.address}</p>
     <div class="row" style="width: 100%;">
         <div class="time col-3">
             <div class="time-value" data-bs-toggle="modal" data-bs-target="#modal-1">
@@ -54,7 +57,7 @@ const renderTheaterList = (id) => {
         `
 
         list.appendChild(e);
-    }
+    })
 }
 
 
