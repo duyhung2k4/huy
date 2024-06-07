@@ -4,7 +4,7 @@ import films_sapchieu from "../../data/film_sapchieu.json" assert { type: "json"
 import sales from "../../data/sale.json" assert { type: "json"};
 import sukiens from "../../data/sukien.json" assert { type: "json" };
 
-const renderFilmList = (id, data) => {
+const renderFilmList = (id, data, type) => {
     const list = document.getElementById(id);
 
     data.forEach((item,index) => {
@@ -28,7 +28,7 @@ const renderFilmList = (id, data) => {
                         Mua vé ngay
                     </button>
                 </a>
-                <button class="btn btn-show mt-3" data-bs-toggle="modal" data-bs-target="#film-${index}">i</button>
+                <button class="btn btn-show mt-3" data-bs-toggle="modal" data-bs-target="#${type}-${index}">i</button>
             </div>
         </div>
         `
@@ -56,13 +56,13 @@ const renderSaleList = (id, data, type) => {
     })
 }
 
-const renderModalFilm = (data) => {
+const renderModalFilm = (data, type) => {
     const modals = document.getElementById("list-modal");
     data.forEach((item, index) => {
         const modalContainer = document.createElement("div");
         modalContainer.innerHTML = 
         `
-        <div class="modal fade" id="film-${index}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        <div class="modal fade" id="${type}-${index}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
@@ -138,13 +138,17 @@ const renderModalSale = (data, type) => {
 }
 
 const render = () => {
-    renderFilmList("list-film-1", films);
-    renderFilmList("list-film-2", films_dangchieu);
-    renderFilmList("list-film-3", films_sapchieu);
     renderSaleList("list-sale-1", sales, "sale");
-    renderSaleList("list-sale-2", sukiens, "sukien");
-    renderModalFilm(films);
     renderModalSale(sales, "sale");
+    
+    renderFilmList("list-film-1", films, "film");
+    renderFilmList("list-film-2", films_dangchieu, "films_dangchieu");
+    renderFilmList("list-film-3", films_sapchieu, "films_sapchieu");
+    renderModalFilm(films, "film");
+    renderModalFilm(films_dangchieu, "films_dangchieu");
+    renderModalFilm(films_sapchieu, "films_sapchieu");
+    
+    renderSaleList("list-sale-2", sukiens, "sukien");
     renderModalSale(sukiens, "sukien");
 }
 
